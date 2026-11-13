@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="470" viewBox="0 0 1280 470" role="img" aria-label="颜配一次肤质检测的核心链路示意图">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+    <marker id="arDash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+    <filter id="s" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0F172A" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="470" fill="#FFFFFF"/>
+
+  <text x="45" y="48" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="24" font-weight="700" fill="#0F172A">一次肤质检测的核心链路（自绘示意）</text>
+  <text x="45" y="74" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="12.5" fill="#64748B">从登录到结果页共 6 段；橙色与紫色是当时最薄弱、最贵的两段，虚线是「结果之后」缺失的两块能力</text>
+
+  <!-- STEP 1 登录 -->
+  <rect x="45" y="112" width="165" height="126" rx="12" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.4" filter="url(#s)"/>
+  <text x="61" y="138" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="10.5" letter-spacing="1" fill="#6366F1">STEP 1</text>
+  <text x="61" y="166" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#312E81">登录</text>
+  <text x="61" y="190" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#4338CA">5 种方式统一换发 JWT</text>
+  <text x="61" y="208" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#4338CA">uid 作为唯一身份</text>
+  <text x="61" y="226" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#4338CA">有效期 30 天，无刷新</text>
+
+  <line x1="216" y1="175" x2="242" y2="175" stroke="#64748B" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- STEP 2 采集 -->
+  <rect x="250" y="112" width="165" height="126" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.4" filter="url(#s)"/>
+  <text x="266" y="138" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="10.5" letter-spacing="1" fill="#10B981">STEP 2</text>
+  <text x="266" y="166" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#065F46">采集</text>
+  <text x="266" y="190" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#047857">视频引导三步拍：正视/左/右</text>
+  <text x="266" y="208" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#047857">相机单拍 / 相册 ≤3 张</text>
+  <text x="266" y="226" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#047857">语音提示 + 倒计时</text>
+
+  <line x1="421" y1="175" x2="447" y2="175" stroke="#64748B" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- STEP 3 上传 -->
+  <rect x="455" y="112" width="165" height="126" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#s)"/>
+  <text x="471" y="138" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="10.5" letter-spacing="1" fill="#3B82F6">STEP 3</text>
+  <text x="471" y="166" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#1E3A8A">上传</text>
+  <text x="471" y="190" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#1D4ED8">multipart → /skin/detect</text>
+  <text x="471" y="208" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#1D4ED8">Bearer JWT 鉴权</text>
+  <text x="471" y="226" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#DC2626">客户端超时只有 10 秒</text>
+
+  <line x1="626" y1="175" x2="652" y2="175" stroke="#64748B" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- STEP 4 质量闸门 -->
+  <rect x="660" y="112" width="165" height="126" rx="12" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1.4" filter="url(#s)"/>
+  <text x="676" y="138" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="10.5" letter-spacing="1" fill="#F97316">STEP 4</text>
+  <text x="676" y="166" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#9A3412">质量闸门</text>
+  <text x="676" y="190" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#C2410C">只校验大小 / 格式 / MIME</text>
+  <text x="676" y="208" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#C2410C">拦不住逆光、模糊、多人脸</text>
+  <text x="676" y="226" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#C2410C">端侧检测 845 行已被删</text>
+
+  <line x1="831" y1="175" x2="857" y2="175" stroke="#64748B" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- STEP 5 AI 分析 -->
+  <rect x="865" y="112" width="165" height="126" rx="12" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1.4" filter="url(#s)"/>
+  <text x="881" y="138" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="10.5" letter-spacing="1" fill="#8B5CF6">STEP 5</text>
+  <text x="881" y="166" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#4C1D95">AI 分析</text>
+  <text x="881" y="190" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#6D28D9">固定 Prompt + JSON 契约</text>
+  <text x="881" y="208" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#6D28D9">服务端超时 45 秒</text>
+  <text x="881" y="226" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#6D28D9">无重试、无缓存、无成本统计</text>
+
+  <line x1="1036" y1="175" x2="1062" y2="175" stroke="#64748B" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- STEP 6 结果页 -->
+  <rect x="1070" y="112" width="165" height="126" rx="12" fill="#FDF2F8" stroke="#FBCFE8" stroke-width="1.4" filter="url(#s)"/>
+  <text x="1086" y="138" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="10.5" letter-spacing="1" fill="#EC4899">STEP 6</text>
+  <text x="1086" y="166" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#831843">结果页</text>
+  <text x="1086" y="190" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#BE185D">总分 + 8 维详情</text>
+  <text x="1086" y="208" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#BE185D">关键问题按严重程度排序</text>
+  <text x="1086" y="226" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#BE185D">没有历史，没有推荐</text>
+
+  <!-- 闸门分支 -->
+  <line x1="742" y1="238" x2="742" y2="286" stroke="#94A3B8" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arDash)"/>
+  <rect x="612" y="290" width="260" height="58" rx="10" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="742" y="314" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11.5" font-weight="600" fill="#9A3412">不合格：返回结构化失败</text>
+  <text x="742" y="334" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11" fill="#C2410C">提示按拍摄指南重拍（这一层是有效的）</text>
+
+  <!-- 左侧说明 -->
+  <rect x="45" y="290" width="520" height="96" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="61" y="316" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="#334155">输入质量决定效果上限</text>
+  <text x="61" y="340" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11.5" fill="#475569">· 引导三步拍 + 相册兜底，本质是用流程确定性换结果稳定性</text>
+  <text x="61" y="360" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11.5" fill="#475569">· 端侧人脸与质量检测（845 行）曾接入链路，7 月整改时被删除</text>
+  <text x="61" y="380" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11.5" fill="#475569">· 结果：最该保留的输入控制被放弃，最不该先做的推荐被加上</text>
+
+  <!-- 右侧说明 -->
+  <rect x="900" y="290" width="335" height="96" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="916" y="316" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="#334155">结果之后缺的两块（虚线）</text>
+  <text x="916" y="340" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11.5" fill="#475569">· 检测历史与趋势对比 —— 未实现（不落库）</text>
+  <text x="916" y="360" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11.5" fill="#475569">· 产品推荐与购买转化 —— 后端有接口，客户端未接</text>
+  <text x="916" y="380" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="11.5" fill="#475569">· 两者都不影响「能演示」，但都决定「有人用」</text>
+
+  <line x1="1152" y1="238" x2="1152" y2="286" stroke="#94A3B8" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arDash)"/>
+  <line x1="332" y1="238" x2="332" y2="286" stroke="#94A3B8" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arDash)"/>
+
+  <line x1="45" y1="424" x2="1235" y2="424" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="45" y="448" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="12" fill="#64748B">说明：复盘自绘，仅表达链路与当时的薄弱点；不含真实接口地址、密钥、用户数据与 App 截图。</text>
+</svg>
